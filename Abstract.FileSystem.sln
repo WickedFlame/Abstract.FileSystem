@@ -9,12 +9,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AC210C33
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstract.FileSystem.Test", "Tests\Abstract.FileSystem.Test\Abstract.FileSystem.Test.csproj", "{80DED7E1-90C4-43D1-8043-1B7693FCB42B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{A77E2487-9254-4819-905B-1721F147D704}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A77E2487-9254-4819-905B-1721F147D704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A77E2487-9254-4819-905B-1721F147D704}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3305D6E6-D721-48AA-AA78-1F05361F8257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3305D6E6-D721-48AA-AA78-1F05361F8257}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3305D6E6-D721-48AA-AA78-1F05361F8257}.Release|Any CPU.ActiveCfg = Release|Any CPU
