@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abstract.FileSystem", "Abstract.FileSystem\Abstract.FileSystem.csproj", "{3305D6E6-D721-48AA-AA78-1F05361F8257}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abstract.FileSystem", "src\Abstract.FileSystem\Abstract.FileSystem.csproj", "{3305D6E6-D721-48AA-AA78-1F05361F8257}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AC210C33-986C-44A9-8900-F612D2BC8A6C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abstract.FileSystem.Test", "Tests\Abstract.FileSystem.Test\Abstract.FileSystem.Test.csproj", "{80DED7E1-90C4-43D1-8043-1B7693FCB42B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abstract.FileSystem.Test", "src\Tests\Abstract.FileSystem.Test\Abstract.FileSystem.Test.csproj", "{80DED7E1-90C4-43D1-8043-1B7693FCB42B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{A77E2487-9254-4819-905B-1721F147D704}"
 EndProject
