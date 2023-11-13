@@ -2,6 +2,34 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/WickedFlame/Abstract.FileSystem</RepositoryUrl>
+    <Authors>Christian Walpen</Authors>
+    <Company>WickedFlame</Company>
+    <Description>Abstraction for the .Net Filesystem classes</Description>
+    <Copyright>@WickedFlame 2023</Copyright>
+    <PackageTags>Abstraction, File, Directory</PackageTags>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Version>0.0.0.0</Version>
+    <AssemblyVersion>0.0.0</AssemblyVersion>
+    <FileVersion>0.0.0.0</FileVersion>
+    <PackageVersion>0.0.0-RC01</PackageVersion>
+    <Title>Abstract.FileSystem</Title>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PackageProjectUrl>http://wickedflame.github.io/Abstract.FileSystem</PackageProjectUrl>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Abstract.FileSystem.snk</AssemblyOriginatorKeyFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\Abstract.FileSystem.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 </Project>

@@ -13,6 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.cspr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C9EAD40A-9A9A-4309-816A-D2CCEA0F81A6}"
 	ProjectSection(SolutionItems) = preProject
+		src\Abstract.FileSystem.snk = src\Abstract.FileSystem.snk
 		appveyor.yml = appveyor.yml
 		LICENSE = LICENSE
 		README.md = README.md
