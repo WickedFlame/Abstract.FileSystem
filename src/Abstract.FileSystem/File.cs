@@ -9,6 +9,14 @@ namespace Abstract.FileSystem
     {
         private static IFileService _fileService;
 
+        static File()
+        {
+            _fileService = new FileService();
+        }
+
+        /// <summary>
+        /// Factory for <see cref="IFileService"/>.
+        /// </summary>
         public static IFileService FileServiceFactory
         {
             get
