@@ -1,8 +1,8 @@
 # Abstract.FileSystem
 Abstraction for the .Net Filesystem classes
 
-[![Build status](https://img.shields.io/appveyor/build/chriswalpen/Abstract.FileSystem/master?label=Master&logo=appveyor&style=for-the-badge)](https://ci.appveyor.com/project/chriswalpen/Abstract.FileSystem/branch/master)
-[![Build status](https://img.shields.io/appveyor/build/chriswalpen/Abstract.FileSystem/dev?label=Dev&logo=appveyor&style=for-the-badge)](https://ci.appveyor.com/project/chriswalpen/Abstract.FileSystem/branch/dev)
+[![Build status](https://img.shields.io/appveyor/build/chriswalpen/Abstract-FileSystem/master?label=Master&logo=appveyor&style=for-the-badge)](https://ci.appveyor.com/project/chriswalpen/Abstract-FileSystem/branch/master)
+[![Build status](https://img.shields.io/appveyor/build/chriswalpen/Abstract-FileSystem/dev?label=Dev&logo=appveyor&style=for-the-badge)](https://ci.appveyor.com/project/chriswalpen/Abstract-FileSystem/branch/dev)
 
 
 Wrappers for some common classes from System.IO Namespace to create a layer of abstraction
@@ -15,7 +15,7 @@ Current implementaitons of System.IO
 Instead of using the Namespace System.IO include the Namespace Abstract.FileSystem to use Directory or File.
 
 ## Usage in Tests
-Abstract.FileSystem.Directory and Abstract.FileSystem.File both have a Factory Property. This can be set through the static method Setup(Func<IFileService> service) or Setup(Func<IDirectoryService> service).
+Abstract.FileSystem.Directory and Abstract.FileSystem.File both have a Factory Property. This can be set through the static method Setup(Func\<IFileService\> service) or Setup(Func\<IDirectoryService\> service).
 The Interface IFileService and IDirectoryService both provide the abstraction layers.
 
 ```
