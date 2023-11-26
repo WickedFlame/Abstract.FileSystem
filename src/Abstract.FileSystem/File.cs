@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Abstract.FileSystem
 {
+    /// <summary>
+    /// Abstraction Layer for System.IO.File
+    /// </summary>
     public static class File
     {
         private static IFileService _fileService;
@@ -15,9 +18,9 @@ namespace Abstract.FileSystem
         }
 
         /// <summary>
-        /// Factory for <see cref="IFileService"/>.
+        /// Abstarction layer factory for <see cref="IFileService"/>.
         /// </summary>
-        public static IFileService FileServiceFactory
+        public static IFileService Factory
         {
             get
             {
@@ -30,6 +33,10 @@ namespace Abstract.FileSystem
             }
         }
 
+        /// <summary>
+        /// Setup the factory for accessing File
+        /// </summary>
+        /// <param name="service"></param>
         public static void Setup(Func<IFileService> service)
         {
             _fileService = service.Invoke();

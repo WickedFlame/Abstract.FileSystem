@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Abstract.FileSystem
 {
+    /// <summary>
+    /// Abstraction Interface for System.IO.File
+    /// </summary>
     public interface IFileService
     {
         /// <summary>

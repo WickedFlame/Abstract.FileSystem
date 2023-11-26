@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace Abstract.FileSystem
 {
+    /// <summary>
+    /// Abstraction Layer for System.IO.Directory
+    /// </summary>
     public static class Directory
     {
         private static IDirectoryService _directoryService;
@@ -14,7 +16,10 @@ namespace Abstract.FileSystem
             _directoryService = new DirectoryService();
         }
 
-        public static IDirectoryService DirectoryServiceFactory
+        /// <summary>
+        /// Abstarction layer factory for <see cref="IDirectoryService"/>.
+        /// </summary>
+        public static IDirectoryService Factory
         {
             get
             {
@@ -27,6 +32,10 @@ namespace Abstract.FileSystem
             }
         }
 
+        /// <summary>
+        /// Setup the factory for accessing Directory
+        /// </summary>
+        /// <param name="service"></param>
         public static void Setup(Func<IDirectoryService> service)
         {
             _directoryService = service.Invoke();
@@ -39,7 +48,7 @@ namespace Abstract.FileSystem
         /// <returns>An object that represents the directory at the specified path. This object is returned regardless of whether a directory at the specified path already exists.</returns>
         public static DirectoryInfo CreateDirectory(string path)
         {
-            return DirectoryServiceFactory.CreateDirectory(path);
+            return Factory.CreateDirectory(path);
         }
 
         /// <summary>
