@@ -7,9 +7,10 @@ Abstraction for the .Net Filesystem classes
 
 Wrappers for some common classes from System.IO Namespace to create a layer of abstraction
 
-Current implementaitons of System.IO
+Current abstractions of System.IO
 * Directory
 * File
+* Path
 
 ## Usage in code
 Instead of using the Namespace System.IO include the Namespace Abstract.FileSystem to use Directory or File.
