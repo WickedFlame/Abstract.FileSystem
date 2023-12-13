@@ -5,6 +5,9 @@ using System.Runtime.InteropServices;
 
 namespace Abstract.FileSystem
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [Serializable]
     [DebuggerDisplay("{" + nameof(_path) + "}")]
     public class SystemPath

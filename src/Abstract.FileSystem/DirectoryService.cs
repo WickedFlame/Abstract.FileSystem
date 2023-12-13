@@ -4,6 +4,9 @@ using System.IO;
 
 namespace Abstract.FileSystem
 {
+    /// <summary>
+    /// Wrapper fpr System.IO.Directory
+    /// </summary>
     public class DirectoryService : IDirectoryService
     {
         /// <summary>

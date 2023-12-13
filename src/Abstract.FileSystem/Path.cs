@@ -72,7 +72,7 @@ namespace Abstract.FileSystem
         /// null or an empty string (""), the path information is returned unmodified. If
         /// extension is null, the returned string contains the specified path with its extension
         /// removed. If path has no extension, and extension is not null, the returned path
-        /// string contains extension appended to the end of path.
+        /// string contains extension appended to the end of path.</returns>
         public static string ChangeExtension(string path, string extension)
         {
             return _pathService.ChangeExtension(path, extension);

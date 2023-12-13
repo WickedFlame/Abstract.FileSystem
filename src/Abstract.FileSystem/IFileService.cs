@@ -183,12 +183,12 @@ namespace Abstract.FileSystem
         /// <param name="sourceFileName">The name of the file to move. Can include a relative or absolute path.</param>
         /// <param name="destFileName">The new path and name for the file.</param>
         void Move(string sourceFileName, string destFileName);
-        
+
         /// <summary>
         /// Opens a System.IO.FileStream on the specified path, with the specified mode and access.
         /// </summary>
         /// <param name="path">The file to open.</param>
-        /// <param name="mode">A System.IO.FileMode value that specifies whether a file is created if one doesnot exist, and determines whether the contents of existing files are retained or overwritten.</param>
+        /// <param name="mode">A System.IO.FileMode value that specifies whether a file is created if one does not exist, and determines whether the contents of existing files are retained or overwritten.</param>
         /// <param name="access">A System.IO.FileAccess value that specifies the operations that can be performed on the file.</param>
         /// <returns>An unshared System.IO.FileStream that provides access to the specified file, with the specified mode and access.</returns>
         FileStream Open(string path, FileMode mode, FileAccess access);
@@ -305,7 +305,7 @@ namespace Abstract.FileSystem
         /// Sets the specified System.IO.FileAttributes of the file on the specified path.
         /// </summary>
         /// <param name="path">The path to the file.</param>
-        /// <param name="fileAttributes"A bitwise combination of the enumeration values.></param>
+        /// <param name="fileAttributes">A bitwise combination of the enumeration values.></param>
         void SetAttributes(string path, FileAttributes fileAttributes);
         
         /// <summary>
