@@ -244,7 +244,6 @@ namespace Abstract.FileSystem
         }
 
         /// <summary>
-        /// /// <summary>
         /// Moves a specified file to a new location, providing the option to specify a new file name.
         /// </summary>
         /// <param name="sourceFileName">The name of the file to move. Can include a relative or absolute path.</param>
@@ -255,13 +254,12 @@ namespace Abstract.FileSystem
         }
 
         /// <summary>
-        /// Opens a System.IO.FileStream on the specified path, having the specified mode with read, write, or read/write access and the specified sharing option.
+        /// Opens a System.IO.FileStream on the specified path, with the specified mode and access.
         /// </summary>
         /// <param name="path">The file to open.</param>
         /// <param name="mode">A System.IO.FileMode value that specifies whether a file is created if one does not exist, and determines whether the contents of existing files are retained or overwritten.</param>
         /// <param name="access">A System.IO.FileAccess value that specifies the operations that can be performed on the file.</param>
-        /// <param name="share">A System.IO.FileShare value specifying the type of access other threads have to the file.</param>
-        /// <returns>A System.IO.FileStream on the specified path, having the specified mode with read, write, or read/write access and the specified sharing option.</returns>
+        /// <returns>An unshared System.IO.FileStream that provides access to the specified file, with the specified mode and access.</returns>
         public FileStream Open(string path, FileMode mode, FileAccess access)
         {
             return System.IO.File.Open(path, mode, access);
@@ -421,7 +419,7 @@ namespace Abstract.FileSystem
         /// Sets the specified System.IO.FileAttributes of the file on the specified path.
         /// </summary>
         /// <param name="path">The path to the file.</param>
-        /// <param name="fileAttributes"A bitwise combination of the enumeration values.></param>
+        /// <param name="fileAttributes">A bitwise combination of the enumeration values.></param>
         public void SetAttributes(string path, FileAttributes fileAttributes)
         {
             System.IO.File.SetAttributes(path, fileAttributes);
