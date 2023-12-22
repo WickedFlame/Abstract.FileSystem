@@ -31,5 +31,111 @@ namespace Abstract.FileSystem.Test
         {
             "\\test\\leading\\".RemoveTrailingSlash().Should().Be("\\test\\leading");
         }
+
+
+
+
+
+        [Test]
+        public void StringExtensions_EnsureLeadingSlash_Backslash()
+        {
+            "test\\leading\\".EnsureLeadingSlash().Should().Be("\\test\\leading\\");
+        }
+
+        [Test]
+        public void StringExtensions_EnsureLeadingSlash_Slash()
+        {
+            "test/leading/".EnsureLeadingSlash().Should().Be("/test/leading/");
+        }
+
+        [Test]
+        public void StringExtensions_EnsureLeadingSlash_Backslash_Ok()
+        {
+            "\\test\\leading\\".EnsureLeadingSlash().Should().Be("\\test\\leading\\");
+        }
+
+        [Test]
+        public void StringExtensions_EnsureLeadingSlash_Slash_Ok()
+        {
+            "/test/leading/".EnsureLeadingSlash().Should().Be("/test/leading/");
+        }
+
+        [Test]
+        public void StringExtensions_EnsureLeadingSlash_Mix_Backslash()
+        {
+            "test\\leading/".EnsureLeadingSlash().Should().Be("\\test\\leading/");
+        }
+
+        [Test]
+        public void StringExtensions_EnsureLeadingSlash_Mix_Slash()
+        {
+            "test/leading\\".EnsureLeadingSlash().Should().Be("/test/leading\\");
+        }
+
+        [Test]
+        public void StringExtensions_EnsureLeadingSlash_System()
+        {
+            var separator = SystemPath.OsType == OsType.Unix ? "/" : "\\";
+            $"test".EnsureLeadingSlash().Should().Be($"{separator}test");
+        }
+
+        [Test]
+        public void StringExtensions_EnsureLeadingSlash_Null()
+        {
+            ((string)null).EnsureLeadingSlash().Should().BeNull();
+        }
+
+
+
+
+
+        [Test]
+        public void StringExtensions_EnsureTrailingSlash_Backslash()
+        {
+            "\\test\\leading".EnsureTrailingSlash().Should().Be("\\test\\leading\\");
+        }
+
+        [Test]
+        public void StringExtensions_EnsureTrailingSlash_Slash()
+        {
+            "/test/leading".EnsureTrailingSlash().Should().Be("/test/leading/");
+        }
+
+        [Test]
+        public void StringExtensions_EnsureTrailingSlash_Backslash_Ok()
+        {
+            "\\test\\leading\\".EnsureTrailingSlash().Should().Be("\\test\\leading\\");
+        }
+
+        [Test]
+        public void StringExtensions_EnsureTrailingSlash_Slash_Ok()
+        {
+            "/test/leading/".EnsureTrailingSlash().Should().Be("/test/leading/");
+        }
+
+        [Test]
+        public void StringExtensions_EnsureTrailingSlash_Mix_Backslash()
+        {
+            "\\test/leading".EnsureTrailingSlash().Should().Be("\\test/leading/");
+        }
+
+        [Test]
+        public void StringExtensions_EnsureTrailingSlash_Mix_Slash()
+        {
+            "/test\\leading".EnsureTrailingSlash().Should().Be("/test\\leading\\");
+        }
+
+        [Test]
+        public void StringExtensions_EnsureTrailingSlash_System()
+        {
+            var separator = SystemPath.OsType == OsType.Unix ? "/" : "\\";
+            $"test".EnsureTrailingSlash().Should().Be($"test{separator}");
+        }
+
+        [Test]
+        public void StringExtensions_EnsureTrailingSlash_Null()
+        {
+            ((string) null).EnsureTrailingSlash().Should().BeNull();
+        }
     }
 }
