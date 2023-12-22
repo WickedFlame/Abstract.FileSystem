@@ -16,7 +16,7 @@ namespace Abstract.FileSystem
         /// <returns></returns>
         public static string RemoveLeadingSlash(this string value)
         {
-            if (value.StartsWith("/") || value.StartsWith("\\"))
+            if (value.StartsWith(Separator.Slash) || value.StartsWith(Separator.Backslash))
             {
                 return value.Substring(1);
             }
@@ -31,7 +31,7 @@ namespace Abstract.FileSystem
         /// <returns></returns>
         public static string RemoveTrailingSlash(this string value)
         {
-            if (value.EndsWith("/") || value.EndsWith("\\"))
+            if (value.EndsWith(Separator.Slash) || value.EndsWith(Separator.Backslash))
             {
                 return value.Substring(0, value.Length - 1);
             }
