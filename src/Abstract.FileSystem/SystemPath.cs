@@ -12,10 +12,6 @@ namespace Abstract.FileSystem
     [DebuggerDisplay("{" + nameof(_path) + "}")]
     public class SystemPath
     {
-        internal const char WinSeparator = '\\';
-        internal const char UncSeparator = '\\';
-        internal const char UnixSeparator = '/';
-
         static SystemPath()
         {
             OsType = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? OsType.Windows : OsType.Unix;
@@ -163,10 +159,10 @@ namespace Abstract.FileSystem
         {
             if (OsType == OsType.Unix)
             {
-                return path.Replace(WinSeparator, UnixSeparator);
+                return path.Replace(Separator.WinSeparator, Separator.UnixSeparator);
             }
 
-            return path.Replace(UnixSeparator, WinSeparator);
+            return path.Replace(Separator.UnixSeparator, Separator.WinSeparator);
         }
 
         /// <summary>
@@ -177,7 +173,7 @@ namespace Abstract.FileSystem
         /// <returns></returns>
         public static string Combine(SystemPath path, params string[] segments)
         {
-            var separator = OsType == OsType.Unix ? UnixSeparator : WinSeparator;
+            var separator = OsType == OsType.Unix ? Separator.UnixSeparator : Separator.WinSeparator;
 
             var left = path._path;
             foreach(var right in segments)
