@@ -175,7 +175,7 @@ namespace Abstract.FileSystem
         {
             var separator = OsType == OsType.Unix ? Separator.UnixSeparator : Separator.WinSeparator;
 
-            var left = path._path;
+            var left = path?._path ?? string.Empty;
             foreach(var right in segments)
             {
                 left = $"{left}{separator}{right}";
