@@ -178,7 +178,7 @@ namespace Abstract.FileSystem
             var left = path?._path ?? string.Empty;
             foreach(var right in segments)
             {
-                left = $"{left}{separator}{right}";
+                left = $"{left.RemoveTrailingSlash()}{separator}{right.RemoveLeadingSlash()}";
             }
 
             return left;

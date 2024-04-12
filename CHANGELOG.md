@@ -4,7 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.0.4
+### Fixed
+- SystemPath.Combine removes leading and trainling slash before combining paths
+
 ## v1.0.3
+### Fixed
 - SystemPath.Combine accepts null as leading SystemPath parameter
 
 ## v1.0.2
