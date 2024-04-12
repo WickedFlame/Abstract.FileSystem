@@ -71,6 +71,20 @@ namespace Abstract.FileSystem.Test
         }
 
         [Test]
+        public void SystemPath_Combine_TrainlingSlash()
+        {
+            var path = SystemPath.Combine(null, new[] { "to\\", "file.txt" });
+            path.ToString().Should().Be("\\to\\file.txt".FormatPath());
+        }
+
+        [Test]
+        public void SystemPath_Combine_LeadingSlash()
+        {
+            var path = SystemPath.Combine(null, new[] { "to", "\\file.txt" });
+            path.ToString().Should().Be("\\to\\file.txt".FormatPath());
+        }
+
+        [Test]
         public void SystemPath_Equals()
         {
             new SystemPath("path\\to\\file.txt").Equals(new SystemPath("path\\to\\file.txt")).Should().BeTrue();
