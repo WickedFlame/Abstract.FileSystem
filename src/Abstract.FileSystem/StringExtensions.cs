@@ -131,5 +131,25 @@ namespace Abstract.FileSystem
             var separator = SystemPath.OsType == OsType.Unix ? Separator.Slash : Separator.Backslash;
             return $"{value}{separator}";
         }
+
+        /// <summary>
+        /// Checks if the Path is an absolute path. Check if contains :\ or starts with \\
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public static bool IsAbslolutePath(this string path)
+        {
+            if (string.IsNullOrEmpty(path))
+            {
+                return false;
+            }
+
+            if (SystemPath.OsType == OsType.Unix)
+            {
+                return path.StartsWith(Separator.UnixSeparator);
+            }
+
+            return path.StartsWith("\\\\") || path.Contains(":\\");
+        }
     }
 }

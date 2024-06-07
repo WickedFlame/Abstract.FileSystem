@@ -137,5 +137,19 @@ namespace Abstract.FileSystem.Test
         {
             ((string) null).EnsureTrailingSlash().Should().BeNull();
         }
+
+        [TestCase("c:\\test", true)]
+        [TestCase("C:\\test\\case.exe", true)]
+        [TestCase("\\\\test\\case", true)]
+        [TestCase("\\test\\case.exe", false)]
+        [TestCase("test\\case.exe", false)]
+        [TestCase("", false)]
+        [TestCase(null, false)]
+        [TestCase("/test/case.exe", false)]
+        [TestCase("test/case.exe", false)]
+        public void StringExtensions_IsAbslolutePath(string path, bool expected)
+        {
+            path.IsAbslolutePath().Should().Be(expected);
+        }
     }
 }
