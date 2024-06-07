@@ -14,5 +14,14 @@
         {
             return SystemPath.FormatPath(path);
         }
+        /// <summary>
+        /// Remove the leading slash from the SystemPath
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public static string RemoveLeadingSlash(this SystemPath path)
+        {
+            return path.ToString().RemoveLeadingSlash();
+        }
     }
 }
