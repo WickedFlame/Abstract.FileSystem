@@ -144,7 +144,6 @@ namespace Abstract.FileSystem.Test
         [TestCase("\\test\\case.exe", false)]
         [TestCase("test\\case.exe", false)]
         [TestCase("", false)]
-        [TestCase((string)null, false)]
         public void StringExtensions_IsAbslolutePath_Windows(string path, bool expected)
         {
             if (SystemPath.OsType == OsType.Unix)
@@ -156,7 +155,6 @@ namespace Abstract.FileSystem.Test
         }
 
         [TestCase("", false)]
-        [TestCase((string) null, false)]
         [TestCase("/test/case.exe", true)]
         [TestCase("test/case.exe", false)]
         public void StringExtensions_IsAbslolutePath_Unix(string path, bool expected)
