@@ -1,4 +1,4 @@
-﻿namespace Abstract.FileSystem.Test
+﻿namespace Abstract.FileSystem
 {
     /// <summary>
     /// Extensions for paths
