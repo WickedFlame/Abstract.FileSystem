@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Updated to .Net8.0
+- Updated packages
 
 ## v1.0.5
 ### Added
