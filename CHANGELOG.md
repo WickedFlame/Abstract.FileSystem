@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Fixed namespace for extensions
 
+### Changed
+- Updated to .Net8.0
+
 ## v1.0.5
 ### Added
 - String extension for IsAbslolutePath
