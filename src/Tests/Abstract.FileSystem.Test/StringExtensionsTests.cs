@@ -168,5 +168,27 @@ namespace Abstract.FileSystem.Test
 
             path.IsAbslolutePath().Should().Be(expected);
         }
+
+        [Test]
+        public void StringExtensions_IsAbslolutePath_Windows_Null()
+        {
+            if (SystemPath.OsType == OsType.Unix)
+            {
+                throw new IgnoreException("Test is only for a Windows System");
+            }
+
+            ((string)null).IsAbslolutePath().Should().Be(false);
+        }
+
+        [Test]
+        public void StringExtensions_IsAbslolutePath_Unix_Null()
+        {
+            if (SystemPath.OsType == OsType.Windows)
+            {
+                throw new IgnoreException("Test is only for a Unix System");
+            }
+
+            ((string) null).IsAbslolutePath().Should().Be(false);
+        }
     }
 }
