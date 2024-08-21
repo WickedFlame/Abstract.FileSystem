@@ -144,12 +144,49 @@ namespace Abstract.FileSystem.Test
         [TestCase("\\test\\case.exe", false)]
         [TestCase("test\\case.exe", false)]
         [TestCase("", false)]
-        [TestCase(null, false)]
-        [TestCase("/test/case.exe", false)]
-        [TestCase("test/case.exe", false)]
-        public void StringExtensions_IsAbslolutePath(string path, bool expected)
+        public void StringExtensions_IsAbslolutePath_Windows(string path, bool expected)
         {
+            if (SystemPath.OsType == OsType.Unix)
+            {
+                throw new IgnoreException("Test is only for a Windows System");
+            }
+
             path.IsAbslolutePath().Should().Be(expected);
+        }
+
+        [TestCase("", false)]
+        [TestCase("/test/case.exe", true)]
+        [TestCase("test/case.exe", false)]
+        public void StringExtensions_IsAbslolutePath_Unix(string path, bool expected)
+        {
+            if (SystemPath.OsType == OsType.Windows)
+            {
+                throw new IgnoreException("Test is only for a Unix System");
+            }
+
+            path.IsAbslolutePath().Should().Be(expected);
+        }
+
+        [Test]
+        public void StringExtensions_IsAbslolutePath_Windows_Null()
+        {
+            if (SystemPath.OsType == OsType.Unix)
+            {
+                throw new IgnoreException("Test is only for a Windows System");
+            }
+
+            ((string)null).IsAbslolutePath().Should().Be(false);
+        }
+
+        [Test]
+        public void StringExtensions_IsAbslolutePath_Unix_Null()
+        {
+            if (SystemPath.OsType == OsType.Windows)
+            {
+                throw new IgnoreException("Test is only for a Unix System");
+            }
+
+            ((string) null).IsAbslolutePath().Should().Be(false);
         }
     }
 }
