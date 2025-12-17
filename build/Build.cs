@@ -31,7 +31,7 @@ class Build : NukeBuild
     [GitRepository] readonly GitRepository GitRepository;
 
     [Parameter("Version to be injected in the Build")]
-    public string Version { get; set; } = $"1.0.7";
+    public string Version { get; set; } = $"1.0.8";
 
     [Parameter("The Buildnumber provided by the CI")]
     public int BuildNo = 1;
