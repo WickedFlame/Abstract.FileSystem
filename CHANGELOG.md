@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.0.7
+### Added
+- String extension for ToSystemPath to convert a path to the OS specific SystemPath
+
 ## v1.0.6
 ### Fixed
 - Fixed namespace for extensions
