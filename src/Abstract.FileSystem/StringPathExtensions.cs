@@ -10,6 +10,16 @@
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
+        public static string ToSystemPath(this string path)
+        {
+            return SystemPath.FormatPath(path);
+        }
+
+        /// <summary>
+        /// Format a path string based on the path settins of the OS
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
         public static string FormatPath(this string path)
         {
             return SystemPath.FormatPath(path);

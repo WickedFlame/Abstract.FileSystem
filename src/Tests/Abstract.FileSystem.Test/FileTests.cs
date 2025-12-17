@@ -1,4 +1,4 @@
-using Moq;
+using System.IO;
 using System.Text;
 
 namespace Abstract.FileSystem.Test
