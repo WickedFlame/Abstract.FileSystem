@@ -8,9 +8,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - String extension for ToSystemPath to convert a path to the OS specific SystemPath
 
-### Changed
-- Updated to .Net10.0
-
 ## v1.0.6
 ### Fixed
 - Fixed namespace for extensions
