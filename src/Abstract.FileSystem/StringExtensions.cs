@@ -13,6 +13,11 @@ namespace Abstract.FileSystem
         /// <returns></returns>
         public static string RemoveLeadingSlash(this string value)
         {
+            if(string.IsNullOrEmpty(value))
+            {
+                return value;
+            }
+        
             if (value.StartsWith(Separator.Slash) || value.StartsWith(Separator.Backslash))
             {
                 return value.Substring(1);
@@ -28,6 +33,11 @@ namespace Abstract.FileSystem
         /// <returns></returns>
         public static string RemoveTrailingSlash(this string value)
         {
+            if (string.IsNullOrEmpty(value))
+            {
+                return value;
+            }
+
             if (value.EndsWith(Separator.Slash) || value.EndsWith(Separator.Backslash))
             {
                 return value.Substring(0, value.Length - 1);

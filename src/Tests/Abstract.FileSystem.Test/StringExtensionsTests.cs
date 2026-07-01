@@ -15,6 +15,12 @@
         }
 
         [Test]
+        public void StringExtensions_RemoveLeadingSlash_Null()
+        {
+            ((string)null).RemoveLeadingSlash().Should().BeNull();
+        }
+
+        [Test]
         public void StringExtensions_RemoveTrailingSlash_Slash()
         {
             "/test/leading/".RemoveTrailingSlash().Should().Be("/test/leading");
@@ -25,6 +31,14 @@
         {
             "\\test\\leading\\".RemoveTrailingSlash().Should().Be("\\test\\leading");
         }
+
+        [Test]
+        public void StringExtensions_RemoveTrailingSlash_Null()
+        {
+            ((string)null).RemoveTrailingSlash().Should().BeNull();
+        }
+
+
 
 
 
